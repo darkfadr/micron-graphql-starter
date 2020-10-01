@@ -1,0 +1,18 @@
+{
+  "name": "micron-graphql-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@yotie/micron": "^2.0.0-rc5",
+    "apollo-server-micro": "^2.18.1",
+    "graphql-middleware": "^4.0.2",
+    "graphql-shield": "^7.3.6",
+    "graphql-tools": "^6.2.3"
+  }
+}
