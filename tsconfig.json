@@ -19,7 +19,7 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@lib/*": ["lib/*"],
+      "@core/*": ["core/*"],
     },
     "resolveJsonModule": true
   },

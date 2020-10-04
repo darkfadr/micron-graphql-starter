@@ -1,17 +1,19 @@
 import { gql } from 'apollo-server-micro';
 
-const schema = gql`
+export const typeDefs = gql`
   type User {
-    id: Int!
+    id: ID!
     firstname: String
     lastname: String
     email: String
   }
 
   type Query {
-    user: User
+    user(id: ID!): User
     users: [User]
   }
-`;
 
-export default schema
+  type Mutation {
+    login(email: String!): String
+  }
+`;

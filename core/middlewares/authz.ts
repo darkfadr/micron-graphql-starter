@@ -6,13 +6,11 @@ const isBasic = rule({ cache: 'contextual' })(
   }
 );
 
-
 export const authz = shield(
   {
     Query: {
       user: isBasic
-    },
-    Mutation: {}
+    }
   }, 
   { debug: true }
 );
