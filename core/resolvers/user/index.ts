@@ -1,4 +1,4 @@
 export * as type from './type';
-export * as queries from './queries';
-export * as mutations from './mutations';
+export * as Query from './queries';
+export * as Mutation from './mutations';
 //the same can be done for subscriptions
