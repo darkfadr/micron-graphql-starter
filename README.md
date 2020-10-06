@@ -1,7 +1,9 @@
 <p align="center">
   <h1 align="center">
-    <strong><em>μm</em></strong>
-    <small>micron</small>
+    <strong>
+      <em>μm</em>
+      <small>micron</small>
+    </strong>
   </h1>
 </p>
 <br/><br/><br/>

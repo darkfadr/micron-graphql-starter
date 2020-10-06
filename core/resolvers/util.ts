@@ -1,29 +1,25 @@
-import { IResolvers } from 'apollo-server-micro';
-export type Domain = {
-  type: IResolvers,
-  queries: IResolvers,
-  mutations: IResolvers
+import { mergeResolvers as merge, IResolvers } from 'graphql-tools';
+
+interface IndexSignatureInterface {
+  [index: string]: any
 }
 
-export type ApolloResolvers = IResolvers & {
-  [key:string]: IResolvers,
-  Query: IResolvers,
-  Mutation: IResolvers
+type StringIndexed<T> = T & IndexSignatureInterface;
+
+export type Domains = {
+  [key:string]: IResolvers
+}
+
+export const mergeResolvers = (domains: Domains): StringIndexed<IResolvers> => {
+  const resolvers = Object.keys(domains)
+    .map(key => {
+      const schema = domains[key];
+      //@ts-ignore | need a better way of setting the type level resolvers
+      schema[key] = schema.type;
+      delete schema.type;
+
+      return schema;
+    });
+
+  return merge(resolvers);
 };
-
-export const mergeResolvers = (domains: { [key:string]: Domain }): ApolloResolvers => {
-  const resolvers =  Object.keys(domains)
-    .map(key => ({ key, domain: domains[key] }) )
-    .reduce((map, schema) => {
-      const { key, domain } = schema;
-
-      map[key] = domain.type;
-      map.Query = { ...map.Query, ...domain.queries };
-      map.Mutation = { ...map.Mutation, ...domain.mutations};
-
-      return map;
-    }, {} as ApolloResolvers);
-  
-  //maybe delete resolvers[Query | Mutation] if they are empty after merge
-  return resolvers;
-}
