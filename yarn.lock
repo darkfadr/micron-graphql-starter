@@ -1032,10 +1032,10 @@
   dependencies:
     tslib "^1.9.3"
 
-"@yotie/micron@^2.0.0-rc5":
-  version "2.0.0-rc5"
-  resolved "https://registry.yarnpkg.com/@yotie/micron/-/micron-2.0.0-rc5.tgz#d35fb070bb2f3d90b830f825dee3181beb49e05e"
-  integrity sha512-nU3Of2njqcg781NWEsIAnih+vP4ycnX445shnkKwuh/5QnySKzfqxQlmg0UL+nu4NX/887DSvsA5MoF804jnHw==
+"@yotie/micron@^2.0.0-rc6":
+  version "2.0.0-rc6"
+  resolved "https://registry.yarnpkg.com/@yotie/micron/-/micron-2.0.0-rc6.tgz#525e6f0a282475584090783ef0e547de216a8cf9"
+  integrity sha512-LmKXQ4eQTeovR3mFiibw0rHq4mQOqAKje/OLiuJZwuS/BUfTTl6VIo5fs21BD5l8epgPJnROIuEIZASOOSy5Ag==
   dependencies:
     "@vercel/node" "^1.8.0"
     content-type "^1.0.4"

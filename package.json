@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/faker": "^5.1.2",
-    "@yotie/micron": "^2.0.0-rc5",
+    "@yotie/micron": "^2.0.0-rc6",
     "apollo-datasource": "^0.7.2",
     "apollo-server-core": "^2.18.1",
     "apollo-server-micro": "^2.18.1",
